@@ -6,6 +6,7 @@ import IconMotionGraphik from '../../../UI/icons/IconMotionGraphik';
 import IconPhotography from '../../../UI/icons/IconPhotography';
 import IconVideography from '../../../UI/icons/IconVideography';
 import OneTab from '../OneTab/OneTab';
+import IconGraphikDesigner from '../../../UI/icons/IconGraphikDesigner';
 
 interface ITab {
   icon: ReactNode,
@@ -25,7 +26,7 @@ const MOCK: Array<ITab> = [
     description: 'We provide UI/UX Design services, and of course with the best quality',
   },
   {
-    icon: <IconDevelopment/>,
+    icon: <IconGraphikDesigner/>,
     title: 'Graphik Designer',
     description: 'We provide Graphic Design services, with the best designers',
   },
