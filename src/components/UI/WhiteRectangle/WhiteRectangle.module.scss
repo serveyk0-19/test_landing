@@ -1,0 +1,21 @@
+@use '../../../scss/settings';
+@use '../../../scss/mixins';
+
+.whiteRectangle {
+  border: 2px solid settings.$white;
+  border-radius: 22.18px;
+  transform: rotate(23.64deg);
+  width: 375.34px;
+  height: 375.34px;
+
+  @include mixins.media-max(settings.$lg-break) {
+    width: 280px;
+    height: 280px;
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    width: 220px;
+    height: 220px;
+    border-radius: 22.18px 22.18px 15px 22.18px;
+  }
+}

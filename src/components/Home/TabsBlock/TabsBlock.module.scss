@@ -1,0 +1,123 @@
+@use '../../../scss/settings';
+@use '../../../scss/mixins';
+
+.tabsBlock {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 150px;
+}
+
+.title {
+  max-width: 695px;
+  margin: 0 auto;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+
+  @include mixins.media-max(settings.$md-break) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 40px;
+    line-height: 56px;
+    max-width: 90%;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    font-size: 36px;
+    line-height: 54px;
+    margin: 0;
+    text-align: start;
+  }
+}
+
+.tabsHeader {
+  position: relative;
+
+  .triangles {
+    width: 104px;
+    height: 120px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+
+    @include mixins.media-max(settings.$lg-break) {
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    @include mixins.media-max(settings.$md-break) {
+      top: -90px;
+    }
+
+    @include mixins.media-max(settings.$xs-break) {
+      width: 65px;
+      height: 75px;
+    }
+  }
+
+  .cross {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    transform: rotateZ(75deg);
+
+    @include mixins.media-max(settings.$lg-break) {
+      right: 0;
+    }
+
+    @include mixins.media-max(settings.$md-break) {
+      top: 70px;
+    }
+
+    @include mixins.media-max(settings.$sm-break) {
+      bottom: 0;
+    }
+
+    @include mixins.media-max(settings.$xs-break) {
+      width: 19px;
+      height: 19px;
+      transform: rotateZ(0deg) translate(-50%, -50%);
+      top: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.gradient {
+  position: absolute;
+  left: -100%;
+  top: -350px;
+
+  @include mixins.media-max(settings.$sm-break) {
+    display: none;
+  }
+}
+
+.mainCross {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  transform: rotateZ(75deg);
+
+  @include mixins.media-max(settings.$xs-break) {
+    width: 19px;
+    height: 19px;
+    transform: rotateZ(0deg) translate(-50%, -50%);
+    top: auto;
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,36 @@
+@use '../../../scss/settings';
+@use '../../../scss/mixins';
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include mixins.media-max(settings.$xs-break) {
+    gap: 4px;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+
+    @include mixins.media-max(settings.$xs-break) {
+      height: 27px;
+      width: 27px;
+    }
+
+  }
+
+  .title {
+    color: settings.$white;
+
+    padding-top: 3px;
+
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include mixins.media-max(settings.$lg-break) {
+      font-size: 28px;
+    }
+  }
+}

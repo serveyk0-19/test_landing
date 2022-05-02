@@ -1,0 +1,81 @@
+@use '../../../scss/settings';
+@use '../../../scss/mixins';
+
+.videoBlock {
+  margin-top: 170px;
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.videoTitle {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 50px;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include mixins.media-max(settings.$sm-break) {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    grid-column: 1 / 6;
+    margin-right: -20px;
+
+    @include mixins.media-max(settings.$lg-break) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    @include mixins.media-max(settings.$md-break) {
+      font-size: 32px;
+      line-height: 50px;
+    }
+
+    @include mixins.media-max(settings.$sm-break) {
+      grid-column: auto;
+    }
+
+    @include mixins.media-max(settings.$xs-break) {
+      font-size: 36px;
+      line-height: 150%;
+    }
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 39px;
+    letter-spacing: -0.656526px;
+    opacity: .7;
+    grid-column: 7 / 13;
+
+    @include mixins.media-max(settings.$md-break) {
+      font-size: 18px;
+      line-height: 33px;
+    }
+
+    @include mixins.media-max(settings.$sm-break) {
+      grid-column: auto;
+    }
+
+    @include mixins.media-max(settings.$xs-break) {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 60%;
+  left: -50%;
+
+  @include mixins.media-max(settings.$xs-break) {
+    display: none;
+  }
+}

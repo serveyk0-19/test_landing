@@ -1,0 +1,162 @@
+@use '../../../../scss/settings';
+@use '../../../../scss/mixins';
+
+.wrap {
+  position: relative;
+
+  .firstRectangle {
+    margin-top: 203px;
+    margin-left: 20%;
+    box-sizing: content-box;
+
+    @include mixins.media-max(settings.$lg-break) {
+      margin-left: 36%;
+    }
+
+    @include mixins.media-max(settings.$sm-break) {
+      margin: 120px auto 0 auto;
+    }
+  }
+
+  .secondRectangle {
+    box-sizing: content-box;
+    position: absolute;
+
+    top: 65px;
+    left: 25%;
+
+    @include mixins.media-max(settings.$lg-break) {
+      left: 40%;
+    }
+
+
+    @include mixins.media-max(settings.$sm-break) {
+      top: 80px;
+      left: 50%;
+      transform: rotate(23.64deg) translate(-46%, 0%);
+    }
+
+    background-color: #5454D4;
+  }
+
+  .boy {
+    position: absolute;
+    top: -116px;
+    left: -44px;
+    transform: rotate(-23.64deg) scale(1.75);
+
+    @include mixins.media-max(settings.$lg-break) {
+      top: -88px;
+      left: -33px;
+    }
+
+    @include mixins.media-max(settings.$md-break) {
+      top: -31%;
+      left: -12%;
+    }
+  }
+
+  .maskWrap {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    .mask {
+      transform: rotate(-23.64deg);
+
+      margin-top: -60px;
+      margin-left: -65px;
+
+      @include mixins.media-max(settings.$md-break) {
+        margin-top: -50px;
+      }
+    }
+  }
+}
+
+.circles, .zigzag, .cross, .triangles {
+  position: absolute;
+}
+
+.circles {
+  right: 0;
+  top: -35%;
+
+  @include mixins.media-max(settings.$sm-break) {
+    right: 10%;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    width: 35px;
+    height: 42px;
+    top: -45%;
+    right: 5%;
+  }
+}
+
+.cross {
+  right: 0;
+  bottom: -16%;
+
+  @include mixins.media-max(settings.$md-break) {
+    right: -4%;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    right: 10%;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    width: 26px;
+    height: 26px;
+    right: 4%;
+    bottom: -14%;
+  }
+}
+
+.triangles {
+  left: -19.5%;
+  bottom: -23.5%;
+
+  @include mixins.media-max(settings.$lg-break) {
+    left: 10%;
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    left: 5%;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    margin-top: 120px;
+    bottom: -47.5%;
+    left: 10%;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    width: 39px;
+    height: 51px;
+    bottom: -40%;
+    left: 5%;
+  }
+}
+
+.zigzag {
+  left: -10%;
+  top: -23.5%;
+
+  @include mixins.media-max(settings.$lg-break) {
+    left: 15%;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    top: -33.5%;
+    left: 5%;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    width: 65px;
+    height: 20px;
+    top: -35%;
+    left: 0;
+  }
+}

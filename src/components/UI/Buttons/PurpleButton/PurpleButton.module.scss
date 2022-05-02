@@ -1,0 +1,29 @@
+@use '../../../../scss/settings';
+@use '../../../../scss/mixins';
+
+.button {
+  @include mixins.btn-reset();
+
+  background-color: settings.$activeLink;
+  color: settings.$white;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 16px 27px 15px;
+
+  font-size: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.500211px;
+  white-space: nowrap;
+  @include mixins.media-max(settings.$md-break) {
+    font-size: 16px;
+    padding: 13px 20px 12px;
+    border-radius: 0;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    padding: 14px 30px 12px;
+  }
+}

@@ -1,0 +1,73 @@
+@use '../../scss/settings';
+@use '../../scss/mixins';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  @include mixins.media-max(settings.$md-break) {
+    flex-wrap: wrap;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-left: 100px;
+  font-size: 18px;
+
+  @include mixins.media-max(settings.$lg-break) {
+    gap: 30px;
+    margin-left: 50px;
+
+    a {
+      font-size: 16px !important;
+    }
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    gap: 25px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.rights {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 38px;
+  text-align: right;
+  letter-spacing: -0.500211px;
+  color: settings.$white;
+  opacity: .7;
+
+  @include mixins.media-max(settings.$lg-break) {
+    font-size: 16px;
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 0;
+  }
+}

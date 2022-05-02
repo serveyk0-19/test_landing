@@ -1,0 +1,33 @@
+@use '../../scss/mixins';
+@use '../../scss/settings';
+
+.layout {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: settings.$bg-color;
+}
+
+.wrapper {
+  max-width: 1440px;
+
+  padding: 40px 120px 100px;
+  margin: 0 auto;
+
+  @include mixins.media-max(settings.$lg-break) {
+    padding: 30px 80px 80px;
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    padding: 30px 60px 60px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    padding: 30px 40px 50px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    padding: 34px 24px;
+  }
+}

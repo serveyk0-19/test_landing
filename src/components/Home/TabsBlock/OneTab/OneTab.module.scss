@@ -1,0 +1,45 @@
+@use '../../../../scss/settings';
+@use '../../../../scss/mixins';
+
+.oneTab {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  padding: 49px 42px;
+
+  @include mixins.media-max(settings.$md-break) {
+    padding: 49px 22px;
+  }
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.750316px;
+
+    @include mixins.media-max(settings.$sm-break) {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.500211px;
+    opacity: .7;
+
+    @include mixins.media-max(settings.$sm-break) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  svg {
+    margin: 0 auto;
+  }
+}

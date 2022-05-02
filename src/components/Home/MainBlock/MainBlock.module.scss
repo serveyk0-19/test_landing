@@ -1,0 +1,96 @@
+@use '../../../scss/settings';
+@use '../../../scss/mixins';
+
+.mainBlock {
+  position: relative;
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 29px;
+
+  @include mixins.media-max(settings.$sm-break) {
+    grid-template-columns: 1fr;
+  }
+
+  .buildPlatformWrap {
+    margin-top: 115px;
+    grid-column: 1 / 7;
+    z-index: 2;
+
+    @include mixins.media-max(settings.$lg-break) {
+      grid-column: 1 / 6;
+    }
+
+    @include mixins.media-max(settings.$md-break) {
+      margin-top: 145px;
+    }
+
+    @include mixins.media-max(settings.$sm-break) {
+      margin-top: 30px;
+      grid-column: auto;
+    }
+  }
+
+  .boyWrap {
+    z-index: 2;
+    grid-column: 7 / 13;
+
+    @include mixins.media-max(settings.$lg-break) {
+      grid-column: 6 / 13;
+    }
+
+    @include mixins.media-max(settings.$sm-break) {
+      grid-column: auto;
+    }
+
+    @include mixins.media-max(settings.$xs-break) {
+      margin-top: 55px;
+    }
+  }
+}
+
+.firstGradient {
+  height: 1233.79px;
+  left: -50%;
+  top: -300px;
+  position: absolute;
+
+  @include mixins.media-max(settings.$sm-break) {
+    display: none;
+  }
+}
+
+.secondGradient {
+  height: 1400px;
+  right: -65%;
+  top: -150px;
+  position: absolute;
+
+  @include mixins.media-max(settings.$sm-break) {
+    display: none;
+  }
+}
+
+.thirdGradient {
+  display: none;
+
+  @include mixins.media-max(settings.$sm-break) {
+    display: block;
+    left: -100%;
+    top: -25%;
+    position: absolute;
+    max-height: 1000px;
+  }
+}
+
+.fourthGradient {
+  display: none;
+
+  @include mixins.media-max(settings.$sm-break) {
+    display: block;
+    position: absolute;
+    max-height: 1000px;
+    left: -100%;
+    top: 10%;
+  }
+}

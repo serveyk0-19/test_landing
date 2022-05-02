@@ -1,0 +1,20 @@
+@use '../../../../scss/settings';
+@use '../../../../scss/mixins';
+
+.tabs {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+
+  @include mixins.media-max(settings.$lg-break) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
